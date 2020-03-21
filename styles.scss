@@ -1,0 +1,38 @@
+@import './theme';
+
+html{
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  color: $font-color !important;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
+  @extend %header;
+}
+h2 {
+  font-size: $mod_1*$mod_1 *1rem !important;
+  @extend %header;
+}
+h3 {
+  font-size: $mod_1 *1rem !important;
+  @extend %header;
+}
+
+.container{
+  #banner{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section > div {
+    max-width: $content-width--max;
+    padding: $container-padding;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}

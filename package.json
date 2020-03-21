@@ -1,15 +1,23 @@
 {
-  "name": "personalw",
+  "name": "personalwebsite",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export",
+    "deploy": "npm run build && npm run export"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "next": "9.3.1",
+    "node-sass": "^4.13.1",
     "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.0",
+    "react-normalize": "^0.4.4",
+    "react-p5": "^1.3.2",
+    "react-p5-wrapper": "^2.0.0",
+    "react-scroll": "^1.7.16"
   }
 }
