@@ -1,0 +1,74 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jest": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/anchor-is-valid": [
+            "warn",
+            {
+                "aspects": [
+                    "invalidHref"
+                ]
+            }
+        ],
+        "curly": "error",
+        "brace-style": [
+            "error",
+            "1tbs"
+        ],
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "off",
+        "no-continue": "off",
+        "no-unreachable": "warn",
+        "no-unused-vars": "error",
+        "no-use-before-define": "error",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "quotes": [
+            2,
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-extra-semi": "error",
+        "indent": [
+            "warn",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "never",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            "only-multiline"
+        ]
+    },
+    "parser": "babel-eslint",
+    "extends": "react-app",
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "import"
+    ]
+}

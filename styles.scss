@@ -1,38 +1,185 @@
 @import './theme';
 
-html{
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  color: $font-color !important;
-}
-
-body{
-  font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-  font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
-  @extend %header;
-}
-h2 {
-  font-size: $mod_1*$mod_1 *1rem !important;
-  @extend %header;
-}
-h3 {
-  font-size: $mod_1 *1rem !important;
-  @extend %header;
-}
-
 .container{
-  #banner{
-    height: 70vh;
+  background-image: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
+  background-size: 500% 500%;
+  animation: backgroundAnimation $background-transition--time $animation-curve infinite;
+
+  canvas {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+
+  section {
+    z-index: 2;
+    position: relative;
+    min-height: 75vh;
+    min-height: calc(var(--vh, 1vh) * 75);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+
+    @include media("<=tablet") {
+      min-height: 50vh;
+      min-height: calc(var(--vh, 1vh) * 50);
+    }
+  }
+
+
+  #banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >div {
+      width: 100%;
+      text-align: left;
+    }
+    h1 > div {
+      overflow: hidden;
+      //position: relative;
+      span {
+
+      }
+    }
+
+    //h1{
+    //  mix-blend-mode: difference;
+    //  color: white;
+    //}
+
   }
   section > div {
+    max-width: $content-width--max;
+    width: 100%;
+    padding: $container-padding;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+
+  #logos{
     max-width: $content-width--max;
     padding: $container-padding;
     margin: 0 auto;
     box-sizing: border-box;
+
+
+    .logo-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      box-sizing: border-box;
+      padding: 0;
+
+      & > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: $container-padding/2 0;
+
+        &:first-of-type{
+          padding-top: $container-padding*1.5;
+        }
+      }
+
+      .logo {
+        height: 70px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        box-sizing: border-box;
+
+
+        svg {
+          height: 60px;
+          width: auto;
+        }
+
+        .st0 {
+          fill: #BBBDBF;
+        }
+
+        .st1 {
+          fill: #034DA1;
+        }
+
+        .st2 {
+          fill: #FFF100;
+        }
+        .st4 {
+          fill: #626366;
+        }
+
+        &[property="nike"], &[property="Benz"], &[property="JRC"] {
+          svg {
+            height: 50px !important;
+            width: auto !important;
+          }
+        }
+
+        &[property="JRC"], &[property="FCH"], {
+          svg {
+            height: 60px !important;
+            width: auto !important;
+          }
+        }
+      }
+    }
+  }
+
+  #about{
+    min-height: initial;
+
+    h3 {
+      padding-bottom: .5rem;
+      overflow: hidden;
+      span{
+        border-bottom: 2px solid $border-color--dark;
+      }
+    }
+    p {
+      margin: 1rem 0 .5rem;
+    }
+    ul{
+      margin: .25rem 0 1rem;
+    }
+    .academia{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+}
+
+.contentLink{
+  cursor: pointer;
+  position: relative;
+
+  border: 3px solid $interaction--color;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+
+  &:hover{
+    &:before{
+      top: 0;
+    }
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    background: $interaction--color;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top $interaction--timer $animation-curve;
   }
 }

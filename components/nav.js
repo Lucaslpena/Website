@@ -1,7 +1,9 @@
 import React, {Component } from 'react';
-import PropTypes from 'prop-types';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import './nav.scss';
+
+const scrollTime = 500;
+const scrollOffset = -150;
 
 export default class Nav extends Component {
   constructor(props) {
@@ -15,19 +17,50 @@ export default class Nav extends Component {
     return(
       <nav>
         <div>
-          <a>Lucas Lorenzo Pena</a>
+          <Link
+            activeClass="active"
+            to="banner"
+            spy={true}
+            smooth={true}
+            offset={scrollOffset}
+            duration= {scrollTime}
+          >
+            Lucas Lorenzo Pena
+          </Link>
+
         </div>
         <div>
           {/*<a>Selected Works</a>*/}
         </div>
         <div>
-          <a>Current & Past Gigs</a>
+          <Link
+            activeClass="active"
+            to="gigs"
+            spy={true}
+            smooth={true}
+            offset={scrollOffset}
+            duration= {scrollTime}
+          >Work</Link>
         </div>
         <div>
-          <a>About</a>
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={scrollOffset}
+            duration= {scrollTime}
+          >About</Link>
         </div>
         <div>
-          <a>Contact</a>
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={scrollOffset}
+            duration= {scrollTime}
+          >Contact</Link>
         </div>
       </nav>
     )

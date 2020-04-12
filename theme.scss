@@ -1,12 +1,32 @@
+@import './mixins/media.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
 $content-width--max: 1440px;
-$container-padding: 3rem;
+$container-padding: 2rem;
 
 $min_width: 320px;
 $max_width: 1024px;
 $min_font: 14px;
-$max_font: 20px;
+$max_font: 22px;
 
-$font-color: #000;
+$font-color--dark: black;
+$font-color--light: white;
+$font-color--inactive: hsla(0,0,0,.8);
+$nav-color: white;
+$background-color: red;
+$border-color--light: white;
+$border-color--dark: black;
+
+$interaction--color: orange;
+$interaction--timer: .25s;
+
+$background-transition--length: 800ms;
+$background-transition--background: 500%;
+$background-transition--time: 12s;
+
+$animation-curve: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
 
 // responsive type
 $mod_1: 4/3;
@@ -40,4 +60,80 @@ $mod_1: 4/3;
 
 %header{
   font-family: 'Palanquin', sans-serif !important;
+}
+
+html{
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  color: $font-color--dark !important;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  overscroll-behavior: none;
+}
+
+h1 {
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem !important;
+  @extend %header;
+  letter-spacing: .1rem;
+  line-height: 135%;
+  margin: 0 !important;
+
+  @include media("<=tablet") {
+    font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
+  }
+}
+h2 {
+  font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
+  @extend %header;
+
+  @include media("<=tablet") {
+    font-size: $mod_1*$mod_1 *1rem !important;
+  }
+}
+h3 {
+  font-size: $mod_1  *1rem !important;
+  @extend %header;
+  letter-spacing: .05rem;
+  line-height: 125%;
+  margin: 0;
+
+  @include media("<=tablet") {
+    font-size: $mod_1 *1rem !important;
+  }
+}
+
+a, a > * {
+  color: $font-color--dark;
+}
+
+em{
+  font-size: .8 *1rem !important;
+  font-style: initial;
+  color: $font-color--light;
+  text-decoration: none;
+}
+
+strong{
+  font-weight: 400;
+}
+
+ul{
+  list-style: none;
+  padding-left: 1rem;
+  li{
+    padding: .25rem ;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0%{background-position:11% 0%}
+  50%{background-position:90% 100%}
+  100%{background-position:11% 0%}
+}
+
+::selection{
+  background: #333;
+  color: #fff;
+  text-shadow: none;
 }
