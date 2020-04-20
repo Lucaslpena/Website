@@ -4,20 +4,18 @@ import { Component } from 'react';
 import {Footer, Nav, InlineLink } from '../components';
 import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations';
-import { initGA, logPageView } from '../utils/analytics'
-
+import { initGA, logPageView } from '../utils/analytics';
 
 import Link from 'next/link';
-
 
 import '../styles.scss';
 
 
-// import dynamic from 'next/dynamic';
-// const P5Wrapper = dynamic(import('react-p5-wrapper'), {
-//   loading: () => <p>Loading...</p>,
-//   ssr: false,
-// });
+import dynamic from 'next/dynamic';
+const P5Wrapper = dynamic(import('react-p5-wrapper'), {
+  loading: () => null,
+  ssr: false,
+});
 
 
 export default class Home extends Component {
@@ -55,7 +53,7 @@ export default class Home extends Component {
 
     return(
       <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
-        {/*<P5Wrapper className={'background-sketch'} sketch={sketch} />*/}
+        <P5Wrapper className={'background-sketch'} sketch={sketch} />
         <Normalize />
         <Head>
           <title>Lucas Lorenzo Pena</title>

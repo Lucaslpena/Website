@@ -1,8 +1,6 @@
 export default (w, h) => (p) => {
 
   class FlowField {
-
-
     constructor(r){
       this.resolution = r;
       this.col = p.width / this.resolution;
@@ -38,10 +36,23 @@ export default (w, h) => (p) => {
     drawVector(v, x, y, scale) {
       p.push();
       p.translate(x, y);
-      p.stroke('#f2f2f2');
-      p.fill('#f2f2f2');
+      p.stroke('#e6e6e6');
+      p.fill('#E6E6E6');
       p.strokeWeight(1);
-      p.rotate(v.heading());
+      /*
+      to remove this shortly
+       */
+      // const mouseVector = p.createVector(p.mouseX, p.mouseY);
+      // const mouseCellVector = mouseVector.sub(v);
+      // p.rotate(mouseCellVector.heading());
+
+      var angle = p.atan2(p.mouseY - y, p.mouseX - x) + (1 * (p.PI / 180));
+      p.rotate(angle);
+
+      // let len = mouseCellVector.mag() * scale;
+      //
+
+      // p.rotate(v.heading());
       let len = v.mag() * scale;
       p.rect(0, 0, len, 1);
       p.pop();
@@ -214,6 +225,11 @@ export default (w, h) => (p) => {
 
   p.draw = () => {
     p.clear();
+    const mouseVector = p.createVector(p.mouseX, p.mouseY);
+    // console.log(mouseVector);
+
+
+
     // p.fill(253, 240, 231, 125);
     // p.fill(255, 255, 255);
     // p.rect(0, 0, p.width, p.height);
