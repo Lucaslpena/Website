@@ -29,7 +29,6 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.setState({width: window.innerWidth, height: window.innerHeight});
-    // window.addEventListener('scroll', this.scrollListen);
 
       if (!window.GA_INITIALIZED) {
         initGA();
@@ -43,17 +42,19 @@ export default class Home extends Component {
     // window.addEventListener('scroll', this.scrollListen);
   }
 
-  // scrollListen = () => {
-  //   console.log('scrollTop');
-  // }
 
   render(){
     const { width, height } = this.state;
-    const sketch = require('../sketches/sketch').default(width, height);
+    let sketch;
+    if (width > 500) {
+      sketch = require('../sketches/sketch').default(width, height);
+    }
 
     return(
       <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
-        <P5Wrapper className={'background-sketch'} sketch={sketch} />
+        {(width > 500) &&
+          <P5Wrapper className={'background-sketch'} sketch={sketch}/>
+        }
         <Normalize />
         <Head>
           <title>Lucas Lorenzo Pena</title>

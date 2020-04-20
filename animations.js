@@ -11,7 +11,7 @@ export const staggerBanner ={
 export const staggerContent ={
   animate: {
     transition: {
-      delayChildren: 1.5,
+      delayChildren: 1.75,
       staggerChildren: 0.25
     }
   }
