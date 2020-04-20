@@ -37,18 +37,22 @@ export default (w, h) => (p) => {
       p.push();
       p.translate(x, y);
       p.strokeWeight(1);
+
+      let angle = p.atan2(p.mouseY - y, p.mouseX - x) + (p.PI / 180);
+      p.rotate(angle);
+
+      let len = 2;
       let distance = p.int(p.dist(p.mouseX, p.mouseY, x, y));
-      if (distance < 80){
-        p.stroke('#e0e0e0');
-        p.fill('#e0e0e0');
+      if (distance < 100){
+        p.stroke('#d9d9d9');
+        p.fill('#d9d9d9');
+        len = v.mag() * scale;
       } else {
         p.stroke('#ededed');
         p.fill('#ededed');
       }
 
-      var angle = p.atan2(p.mouseY - y, p.mouseX - x) + (p.PI / 180);
-      p.rotate(angle);
-      let len = v.mag() * scale;
+
       p.rect(0, 0, len, 1);
       p.pop();
     }
@@ -56,7 +60,7 @@ export default (w, h) => (p) => {
     display(){ // sourced from lectures
       for (let i = 0; i < this.col; i++) {
         for (let j = 0; j < this.row; j++) {
-          this.drawVector(this.field[i][j], i * this.resolution, j * this.resolution, this.resolution - 50);
+          this.drawVector(this.field[i][j], i * this.resolution, j * this.resolution, this.resolution - 45);
         }
       }
     }
