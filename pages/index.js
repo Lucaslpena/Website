@@ -6,16 +6,19 @@ import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations';
 import { initGA, logPageView } from '../utils/analytics';
 
+import Scrollbar from 'react-smooth-scrollbar';
+
+
 import Link from 'next/link';
 
 import '../styles.scss';
 
 
 import dynamic from 'next/dynamic';
-const P5Wrapper = dynamic(import('react-p5-wrapper'), {
-  loading: () => null,
-  ssr: false,
-});
+// const P5Wrapper = dynamic(import('react-p5-wrapper'), {
+//   loading: () => null,
+//   ssr: false,
+// });
 
 
 export default class Home extends Component {
@@ -44,17 +47,22 @@ export default class Home extends Component {
 
 
   render(){
-    const { width, height } = this.state;
-    let sketch;
-    if (width > 500) {
-      sketch = require('../sketches/sketch').default(width, height);
-    }
+    // const { width, height } = this.state;
+    // let sketch;
+    // if (width > 500) {
+    //   sketch = require('../sketches/sketch').default(width, height);
+    // }
 
     return(
-      <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
-        {(width > 500) &&
-          <P5Wrapper className={'background-sketch'} sketch={sketch}/>
-        }
+      <>
+      {/*{(width > 500) &&*/}
+      {/*<P5Wrapper className={'background-sketch'} sketch={sketch}/>*/}
+      {/*}*/}
+      <Scrollbar
+        damping={0.3}
+        className={'scrollContainer'}
+      >
+        <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
         <Normalize />
         <Head>
           <title>Lucas Lorenzo Pena</title>
@@ -1033,6 +1041,8 @@ export default class Home extends Component {
         </motion.section>
         <Footer />
       </motion.div>
+      </Scrollbar>
+      </>
     )
   }
 }

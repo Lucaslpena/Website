@@ -1,17 +1,21 @@
 @import './theme';
 
+.scrollContainer{
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .container{
   background-image: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
   background-size: 500% 500%;
   animation: backgroundAnimation $background-transition--time $animation-curve infinite;
-
-  canvas {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
 
   section {
     z-index: 2;
@@ -22,7 +26,6 @@
     flex-direction: column;
     justify-content: center;
   }
-
 
   #banner{
     display: flex;
