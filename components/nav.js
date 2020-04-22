@@ -32,36 +32,36 @@ export default class Nav extends Component {
         <div>
           {/*<a>Selected Works</a>*/}
         </div>
-        <div>
-          <Link
-            activeClass="active"
-            to="gigs"
-            spy={true}
-            smooth={true}
-            offset={scrollOffset}
-            duration= {scrollTime}
-          >Work</Link>
-        </div>
-        <div>
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={scrollOffset}
-            duration= {scrollTime}
-          >About</Link>
-        </div>
-        <div>
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={scrollOffset}
-            duration= {scrollTime}
-          >Contact</Link>
-        </div>
+        {/*<div>*/}
+        {/*  <Link*/}
+        {/*    activeClass="active"*/}
+        {/*    to="gigs"*/}
+        {/*    spy={true}*/}
+        {/*    smooth={true}*/}
+        {/*    offset={scrollOffset}*/}
+        {/*    duration= {scrollTime}*/}
+        {/*  >Work</Link>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*  <Link*/}
+        {/*    activeClass="active"*/}
+        {/*    to="about"*/}
+        {/*    spy={true}*/}
+        {/*    smooth={true}*/}
+        {/*    offset={scrollOffset}*/}
+        {/*    duration= {scrollTime}*/}
+        {/*  >About</Link>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*  <Link*/}
+        {/*    activeClass="active"*/}
+        {/*    to="contact"*/}
+        {/*    spy={true}*/}
+        {/*    smooth={true}*/}
+        {/*    offset={scrollOffset}*/}
+        {/*    duration= {scrollTime}*/}
+        {/*  >Contact</Link>*/}
+        {/*</div>*/}
       </nav>
     )
   }

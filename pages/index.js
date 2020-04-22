@@ -15,10 +15,10 @@ import '../styles.scss';
 
 
 import dynamic from 'next/dynamic';
-// const P5Wrapper = dynamic(import('react-p5-wrapper'), {
-//   loading: () => null,
-//   ssr: false,
-// });
+const P5Wrapper = dynamic(import('react-p5-wrapper'), {
+  loading: () => null,
+  ssr: false,
+});
 
 
 export default class Home extends Component {
@@ -47,22 +47,14 @@ export default class Home extends Component {
 
 
   render(){
-    // const { width, height } = this.state;
-    // let sketch;
-    // if (width > 500) {
-    //   sketch = require('../sketches/sketch').default(width, height);
-    // }
+    const { width, height } = this.state;
+    let sketch;
+    if (width > 500) {
+      sketch = require('../sketches/sketch').default(width, height);
+    }
 
     return(
       <>
-      {/*{(width > 500) &&*/}
-      {/*<P5Wrapper className={'background-sketch'} sketch={sketch}/>*/}
-      {/*}*/}
-      <Scrollbar
-        damping={0.3}
-        className={'scrollContainer'}
-      >
-        <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
         <Normalize />
         <Head>
           <title>Lucas Lorenzo Pena</title>
@@ -71,6 +63,16 @@ export default class Home extends Component {
                 rel="stylesheet" />
         </Head>
         <Nav />
+        <div className={'pseudo-background'}>
+        {(width > 500) &&
+          <P5Wrapper className={'background-sketch'} sketch={sketch}/>
+        }
+        </ div>
+      <Scrollbar
+        damping={0.2}
+        className={'scrollContainer'}
+      >
+        <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
         <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
           <div>
             <h1>

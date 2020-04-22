@@ -5,17 +5,21 @@
   height: 100vh;
 }
 
-canvas {
-  z-index: 1;
+
+.pseudo-background{
   position: fixed;
   top: 0;
   left: 0;
-}
+  bottom: 0;
+  right: 0;
 
-.container{
   background-image: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
   background-size: 500% 500%;
   animation: backgroundAnimation $background-transition--time $animation-curve infinite;
+}
+
+.container{
+  background: transparent;
 
   section {
     z-index: 2;
@@ -28,6 +32,7 @@ canvas {
   }
 
   #banner{
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -8,9 +8,10 @@ nav{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   height: 5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 4;
+  background-color: transparent;
 
   @include media("<=tablet") {
     & > div:nth-of-type(2){
