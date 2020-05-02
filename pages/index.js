@@ -92,7 +92,7 @@ export default class Home extends Component {
             <ul>
               <li>founding a strategic R&D consultancy with Cece MoSze Tham & Mark B&#252;nger</li>
               <li>designing and developing react platforms with Krashidbuilt</li>
-              <li>creating the future of a kitchen installation for Milan Design Week</li>
+              <li>creating the future of a kitchen installation for Milan Design Week with W3}RD</li>
               <li>lecturing "Designing with Extended Intelligence" for MDEF in IAAC/FabLab</li>
             </ul>
           </div>
