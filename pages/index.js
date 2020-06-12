@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations';
 import { initGA, logPageView } from '../utils/analytics';
 
-import Scrollbar from 'react-smooth-scrollbar';
 
 
 import Link from 'next/link';
@@ -68,10 +67,6 @@ export default class Home extends Component {
           <P5Wrapper className={'background-sketch'} sketch={sketch}/>
         }
         </ div>
-      <Scrollbar
-        damping={0.2}
-        className={'scrollContainer'}
-      >
         <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
         <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
           <div>
@@ -1043,7 +1038,6 @@ export default class Home extends Component {
         </motion.section>
         <Footer />
       </motion.div>
-      </Scrollbar>
       </>
     )
   }

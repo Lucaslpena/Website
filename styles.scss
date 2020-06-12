@@ -1,25 +1,18 @@
 @import './theme';
-
-.scrollContainer{
-  width: 100vw;
-  height: 100vh;
-}
-
-
 .pseudo-background{
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-
-  background-image: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
-  background-size: 500% 500%;
-  animation: backgroundAnimation $background-transition--time $animation-curve infinite;
 }
 
 .container{
   background: transparent;
+
+  background-image: linear-gradient(to bottom right, #fdfbfb 0%, #ebedee 100%);
+  background-size: 500% 500%;
+  animation: backgroundAnimation $background-transition--time $animation-curve infinite;
 
   section {
     z-index: 2;
