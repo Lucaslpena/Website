@@ -1022,7 +1022,7 @@ export default class Home extends Component {
                 </div>
               </div>
               <div className={'skills'}>
-                <p>I have been coding professionally for 6 years and druing that time I have developed these skills:</p>
+                <p>I have been coding professionally for 6 years and during that time I have developed these skills:</p>
                 <ul>
                   <li>Research: Human-Computer Interaction, Civic Technology</li>
                   <li>Emergent Technologies: Distributed Ledgers, Machine Learning</li>
