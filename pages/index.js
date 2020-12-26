@@ -13,11 +13,11 @@ import Link from 'next/link';
 import '../styles.scss';
 
 
-import dynamic from 'next/dynamic';
-const P5Wrapper = dynamic(import('react-p5-wrapper'), {
-  loading: () => null,
-  ssr: false,
-});
+// import dynamic from 'next/dynamic';
+// const P5Wrapper = dynamic(import('react-p5-wrapper'), {
+//   loading: () => null,
+//   ssr: false,
+// });
 
 
 export default class Home extends Component {
@@ -62,11 +62,6 @@ export default class Home extends Component {
                 rel="stylesheet" />
         </Head>
         <Nav />
-        <div className={'pseudo-background'}>
-        {(width > 500) &&
-          <P5Wrapper className={'background-sketch'} sketch={sketch}/>
-        }
-        </ div>
         <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
         <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
           <div>
