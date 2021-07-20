@@ -1,0 +1,57 @@
+@import '../theme/constants';
+@import '../theme/mixins';
+
+.Footer{
+  margin-top: $container-padding;
+  background-color: black;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  color: $font-color--light;
+  transform: translate3d(0,0,0);
+
+  #contact {
+    min-height: initial;
+    max-width: $content-width--max;
+    margin: 0 auto;
+    width: 100%;
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      @include media("<=tablet") {
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      }
+      grid-gap: 2rem;
+      width: 100%;
+      & > div > a {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+
+    .contact{
+      &-container{
+        a{
+          @extend em;
+        }
+      }
+      &--description{
+        position: relative;
+        overflow: hidden;
+        em{
+          position: absolute;
+          top: .75rem;
+        }
+      }
+      &--label{
+        border-top: 2px solid $border-color--light;
+      }
+      &--description, &--label{
+        padding: .5rem 0;
+        width: 100%;
+      }
+    }
+  }
+}

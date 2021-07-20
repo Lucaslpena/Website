@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+$content-width--max: 1440px;
+$container-padding: 2rem;
+
+$min_width: 320px;
+$max_width: 1024px;
+$min_font: 14px;
+$max_font: 22px;
+
+$font-color--dark: black;
+$font-color--light: white;
+$font-color--inactive: hsla(0deg,0%,0%,.8);
+$nav-color: white;
+$background-color: red;
+$border-color--light: white;
+$border-color--dark: black;
+
+$interaction--color: orange;
+$interaction--timer: .25s;
+
+$background-transition--length: 800ms;
+$background-transition--background: 500%;
+$background-transition--time: 12s;
+
+$animation-curve: cubic-bezier(0.6, 0.04, 0.98, 0.335);

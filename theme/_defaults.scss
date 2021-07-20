@@ -1,0 +1,107 @@
+@use "sass:math";
+@import "_constants";
+@import "_mixins";
+
+// responsive type
+$mod_1: math.div(4,3);
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+}
+
+%header{
+  font-family: 'Palanquin', sans-serif !important;
+}
+
+html{
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  color: $font-color--dark !important;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  overscroll-behavior: none;
+}
+
+h1 {
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem !important;
+  @extend %header;
+  letter-spacing: .1rem;
+  line-height: 135%;
+  margin: 0 !important;
+
+  @include media("<=tablet") {
+    font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
+  }
+}
+h2 {
+  font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
+  @extend %header;
+
+  @include media("<=tablet") {
+    font-size: $mod_1*$mod_1 *1rem !important;
+  }
+}
+h3 {
+  font-size: $mod_1  *1rem !important;
+  @extend %header;
+  letter-spacing: .05rem;
+  line-height: 125%;
+  margin: 0;
+
+  @include media("<=tablet") {
+    font-size: $mod_1 *1rem !important;
+  }
+}
+
+a, a > * {
+  color: $font-color--dark;
+}
+
+em{
+  font-size: .8 *1rem !important;
+  font-style: initial;
+  color: $font-color--light;
+  text-decoration: none;
+}
+
+strong{
+  font-weight: 400;
+}
+
+ul{
+  list-style: none;
+  padding-left: 1rem;
+  li{
+    padding: .25rem ;
+  }
+}
+
+::selection{
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
