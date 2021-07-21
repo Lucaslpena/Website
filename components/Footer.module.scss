@@ -17,7 +17,7 @@
     margin: 0 auto;
     width: 100%;
 
-    .contact-wrapper {
+    >div:first-of-type {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       @include media("<=tablet") {
@@ -31,27 +31,28 @@
       }
     }
 
-    .contact{
-      &-container{
+    %fullWidth{
+      padding: .5rem 0;
+      width: 100%;
+    }
+
+      .container{
         a{
           @extend em;
         }
       }
-      &--description{
+      .description{
         position: relative;
         overflow: hidden;
+        @extend %fullWidth;
         em{
           position: absolute;
           top: .75rem;
         }
       }
-      &--label{
+      .label{
         border-top: 2px solid $border-color--light;
+        @extend %fullWidth;
       }
-      &--description, &--label{
-        padding: .5rem 0;
-        width: 100%;
-      }
-    }
   }
 }

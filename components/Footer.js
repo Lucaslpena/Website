@@ -67,14 +67,14 @@ function Footer(props){
     <footer className={style.Footer}>
       { children }
 
-      <section id={'contact'}>
+      <section id={style.contact}>
         <div className={'contact-wrapper'} >
 
           { data.map( (obj, i) =>
-            <div className={'contact-container'} key={i}>
+            <div className={style.container} key={i}>
               <Link prefetch={false} href={obj.link}>
                 <a target='_blank'>
-                  <div className={'contact--description'}>
+                  <div className={style.description}>
                     <motion.em
                       // variants={slideUp}
                       // ----custom={0} animate={footerControls}
@@ -85,7 +85,7 @@ function Footer(props){
                       {msg[i]}
                     </motion.em>
                   </div>
-                  <div className={'contact--label'}>
+                  <div className={style.label}>
                     <em>{obj.description}</em>
                   </div>
                 </a>
