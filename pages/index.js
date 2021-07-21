@@ -45,7 +45,7 @@ export default function Home() {
             <div>
               <ul>
                 <li>created the future of a kitchen installation for Dutch Design Week with W3&#125;RD</li>
-                <li>founded <InlineLink link={'https://www.linkedin.com/company/futuritystudio/'} text={'a strategic R&D consultancy'}/> with Cece MoSze Tham & Mark B&#252;nger... outgrew it</li>
+                <li>founded <InlineLink link={'https://www.linkedin.com/company/futuritystudio/'} text={'a strategic R&D consultancy'}/> with Cece MoSze Tham & Mark B&#252;nger</li>
                 <li>prototyped the future if autonomous commerce with <InlineLink link={'https://www.alpha.company/'} text={'Alpha - Telefonica'}/> (Now Koa Health)</li>
                 <li>lectured &quot;The Atlas of Weak Signals&quot; for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC / FabLab Barcelona'}/></li>
                 <li>researched social cognition and trust at <InlineLink link={'https://specs-lab.com/'} text={'SPECS'}/></li>
