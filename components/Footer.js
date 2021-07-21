@@ -64,7 +64,7 @@ function Footer(props){
     <footer className={style.Footer}>
       { children }
 
-      <section id={style.contact}>
+      <section className={style.contact}>
         <div className={'contact-wrapper'} >
 
           { data.map( (obj, i) =>

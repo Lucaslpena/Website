@@ -37,7 +37,7 @@ export default function Home() {
               <li>continuously synthesizing what I stand for in the world</li>
               <li>designing and developing react platforms with Krashidbuilt</li>
               <li>lecturing &quot;Designing with Extended Intelligence&quot; for MDEF in IAAC/FabLab</li>
-              <li>lecturing &quot;Smart Objects&quot; for Management Design Students in IED/University of Westminster</li>
+              <li>lecturing &quot;Smart Objects&quot; for Design Management Students in IED / University of Westminster</li>
             </ul>
           </div>
           <div>
@@ -45,8 +45,8 @@ export default function Home() {
             <div>
               <ul>
                 <li>created the future of a kitchen installation for Dutch Design Week with W3&#125;RD</li>
-                <li>founded <InlineLink link={'https://www.linkedin.com/company/futuritystudio/'} text={'a strategic R&D consultancy'}/> with Cece MoSze Tham & Mark B&#252;nger</li>
-                <li>prototyped the future if autonomous commerce with <InlineLink link={'https://www.alpha.company/'} text={'Alpha - Telefonica'}/></li>
+                <li>founded <InlineLink link={'https://www.linkedin.com/company/futuritystudio/'} text={'a strategic R&D consultancy'}/> with Cece MoSze Tham & Mark B&#252;nger... outgrew it</li>
+                <li>prototyped the future if autonomous commerce with <InlineLink link={'https://www.alpha.company/'} text={'Alpha - Telefonica'}/> (Now Koa Health)</li>
                 <li>lectured &quot;The Atlas of Weak Signals&quot; for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC / FabLab Barcelona'}/></li>
                 <li>researched social cognition and trust at <InlineLink link={'https://specs-lab.com/'} text={'SPECS'}/></li>
                 <li>lead creative technology at <InlineLink link={'https://www.ideasforchange.com/'} text={'IdeasForChange'}/></li>
@@ -55,7 +55,7 @@ export default function Home() {
                 <li>presented at and recognized by the <InlineLink link={'https://blogs.ec.europa.eu/eupolicylab/portfolios/blockchain4eu/'} text={'EU Commission'}/> as an expert designer of blockchain services</li>
                 <li>co-designed and developed open sourced onboarding experiences for <InlineLink link={'http://making-sense.eu/'} text={'Making Sense EU'}/></li>
                 <li>was in growing <InlineLink link={'https://www.theskimm.com/'} text={'startup'}/>, realized design is important... then left</li>
-                <li>had a <InlineLink link={'http://sofitu.com/'} text={'startup'}/> ... it failed</li>
+                <li>had a startup ... it failed</li>
               </ul>
             </div>
           </div>
