@@ -36,18 +36,18 @@ export default function Home() {
             <ul>
               <li>continuously synthesizing what I stand for in the world</li>
               <li>designing and developing react platforms with Krashidbuilt</li>
-              <li>lecturing "Designing with Extended Intelligence" for MDEF in IAAC/FabLab</li>
-              <li>lecturing "Smart Objects" for Management Design Students in IED/University of Westminster</li>
+              <li>lecturing &quotDesigning with Extended Intelligence&quot for MDEF in IAAC/FabLab</li>
+              <li>lecturing &quotSmart Objects&quot for Management Design Students in IED/University of Westminster</li>
             </ul>
           </div>
           <div>
             <h3>Past:</h3>
             <div>
               <ul>
-                <li>created the future of a kitchen installation for Dutch Design Week with W3}RD</li>
+                <li>created the future of a kitchen installation for Dutch Design Week with W3&#125RD</li>
                 <li>founded a strategic R&D consultancy with Cece MoSze Tham & Mark B&#252;nger</li>
                 <li>prototyped the future if autonomous commerce with <InlineLink link={'https://www.alpha.company/'} text={'Alpha - Telefonica'}/></li>
-                <li>lectured "The Atlas of Weak Signals" for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC / FabLab Barcelona'}/></li>
+                <li>lectured &quotThe Atlas of Weak Signals&quot for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC / FabLab Barcelona'}/></li>
                 <li>researched social cognition and trust at <InlineLink link={'https://specs-lab.com/'} text={'SPECS'}/></li>
                 <li>lead creative technology at <InlineLink link={'https://www.ideasforchange.com/'} text={'IdeasForChange'}/></li>
                 <li>developed creative installations with <InlineLink link={'http://vimod.net/'} text={'VIMOD'}/></li>
