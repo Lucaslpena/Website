@@ -34,9 +34,8 @@ export default function Home() {
           <div>
             <h3>Present:</h3>
             <ul>
-              <li>continuously synthesizing what I stand for in the world</li>
-              <li>designing and developing react platforms with Krashidbuilt</li>
-              <li>lecturing &quot;Designing with Extended Intelligence&quot; for MDEF in IAAC/FabLab</li>
+              <li>exploring the landscape of tech, design, and social systems through <InlineLink link={'https://www.traverse-in.space/'} text={'Traverse In Space'}/></li>
+              <li>lecturing &quot;Designing with Extended Intelligence&quot; for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC/FabLab'}/></li>
               <li>lecturing &quot;Smart Objects&quot; for Design Management Students in IED / University of Westminster</li>
             </ul>
           </div>
@@ -44,6 +43,7 @@ export default function Home() {
             <h3>Past:</h3>
             <div>
               <ul>
+                <li>designing and developing react platforms with <InlineLink link={'https://www.krashidbuilt.com/'} text={'Krashidbuilt'}/></li>
                 <li>created the future of a kitchen installation for Dutch Design Week with W3&#125;RD</li>
                 <li>founded <InlineLink link={'https://www.linkedin.com/company/futuritystudio/'} text={'a strategic R&D consultancy'}/> with Cece MoSze Tham & Mark B&#252;nger</li>
                 <li>prototyped the future if autonomous commerce with <InlineLink link={'https://www.alpha.company/'} text={'Alpha - Telefonica'}/> (Now Koa Health)</li>
