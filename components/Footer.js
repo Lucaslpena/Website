@@ -18,7 +18,7 @@ const messages = {
 };
 
 const data = [
-  {link: 'mailto:me@LucasLorenzo.com', description: 'me@LucasLorenzo.com'},
+  {link: 'mailto:inquiry@lucaslorenzo.digital', description: 'Mail'},
   {link: 'https://twitter.com/lucaslorenzop', description: 'Twitter'},
   {link: 'https://github.com/Lucaslpena', description: 'GitHub'},
   {link: 'https://www.linkedin.com/in/lucaslpena/', description: 'LinkedIn'}

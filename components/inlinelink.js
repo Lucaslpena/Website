@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from './inlinelink.module.scss';
 
-function InlineLink(props) {
+const InlineLink = ({link, text, children}) => {
   return(
-    <Link prefetch={false} href={props.link}>
-      <a target='_blank' style={{display: 'inline-block'}}>
-        {props.text}
+    <Link prefetch={false} href={link}>
+      <a target='_blank' style={{display: 'inline-block'}} className={styles.InlineLink}>
+        {text}
+        {children}
       </a>
     </Link>);
 }

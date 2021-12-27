@@ -1,24 +1,32 @@
 @import '../theme/constants';
 @import '../theme/mixins';
 
+.NavContainer{
+  background: red;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+}
 .Nav{
-  max-width: $content-width--max;
+  width: 100vw;
+  //max-width: $content-width--max;
   margin: 0 auto;
   text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-evenly;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   z-index: 4;
   background-color: transparent;
 
-  @include media("<=tablet") {
-    & > div:nth-of-type(2){
+  @include media("<=768px") {
+    >div:not(:first-of-type){
       display: none;
     }
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    white-space: nowrap;
+    justify-content: flex-start;
   }
 
     > div {
@@ -26,10 +34,18 @@
     align-items: center;
     justify-content: center;
     height: 3rem;
+      em{
+        color: $font-color--dark;
+      }
   }
 
   > div:first-of-type {
-    height: 5rem;
+    height: 3rem;
+  }
+  >div:not(:first-of-type){
+    >p {
+
+    }
   }
 }
 
