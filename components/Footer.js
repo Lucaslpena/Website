@@ -22,7 +22,7 @@ const data = [
   {link: 'https://twitter.com/digitalfaust_', description: 'Twitter'},
   {link: 'https://github.com/Lucaslpena', description: 'GitHub'},
   {link: 'https://www.linkedin.com/in/lucaslpena/', description: 'LinkedIn'},
-  {link: 'https://lucaslorenzop.notion.site/Writing-Index-5ddfe015112e4ba286dedfe5d9fb24d0', description: 'Blog'},
+  {link: '/blog', description: 'Blog'},
   {link: 'https://www.instagram.com/digital.faust/', description: 'Instagram'}
 ]
 

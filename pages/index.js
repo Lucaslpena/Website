@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import { Component } from 'react';
 import {Footer, Nav, InlineLink } from '../components';
 import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations/animations';
-import { initGA, logPageView } from '../utils/analytics';
 import Link from 'next/link';
 import { FileTextIcon } from '@radix-ui/react-icons'
 
@@ -35,7 +33,7 @@ export default function Home() {
             <h3>Present:</h3>
             <ul>
               <li>researching and developing prototypes with <InlineLink link={'https://www.amazon.jobs/en/teams/brand-innovation-lab'} text={'Amazon, Brand Innovation Lab'}/> in EU for multinational corporations in Technology and Fashion sectors</li>
-              <li><InlineLink link={'https://lucaslorenzop.notion.site/Writing-Index-5ddfe015112e4ba286dedfe5d9fb24d0'} text={'exploring the landscape of tech, design, and social systems'}/> and highlighting some here <InlineLink link={'https://www.traverse-in.space/'} text={'Traverse In Space'}/></li>
+              <li><InlineLink link={'/blog'} text={'exploring the landscape of tech, design, and social systems'}/> and highlighting some here <InlineLink link={'https://www.traverse-in.space/'} text={'Traverse In Space'}/></li>
               <li>lecturing &quot;Designing with Extended Intelligence&quot; for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC/FabLab'}/></li>
               <li>lecturing &quot;Smart Objects&quot; for Design Management Students in IED / University of Westminster</li>
             </ul>
