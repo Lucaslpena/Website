@@ -12,16 +12,18 @@ const pickRandom = (arr,count) => {
 }
 
 const messages = {
-  linkDescriptors: ['Development', 'Strategy', 'Consulting', 'Experience Design', 'Research'],
+  linkDescriptors: ['Development', 'Strategy', 'Consulting', 'Design', 'Research', 'Prototyping'],
   meDescriptors: ['Cognitive', 'Creative', 'Experiential', 'Social', 'Interactive', 'Emergent', 'Innovative'],
   aboutDescriptor: ['Creative Technologist', 'FullStack Engineer', 'Lecturer', 'Consultant']
 };
 
 const data = [
   {link: 'mailto:inquiry@lucaslorenzo.digital', description: 'Mail'},
-  {link: 'https://twitter.com/lucaslorenzop', description: 'Twitter'},
+  {link: 'https://twitter.com/digitalfaust_', description: 'Twitter'},
   {link: 'https://github.com/Lucaslpena', description: 'GitHub'},
-  {link: 'https://www.linkedin.com/in/lucaslpena/', description: 'LinkedIn'}
+  {link: 'https://www.linkedin.com/in/lucaslpena/', description: 'LinkedIn'},
+  {link: 'https://lucaslorenzop.notion.site/Writing-Index-5ddfe015112e4ba286dedfe5d9fb24d0', description: 'Blog'},
+  {link: 'https://www.instagram.com/digital.faust/', description: 'Instagram'}
 ]
 
 function Footer(props){
@@ -31,13 +33,15 @@ function Footer(props){
     messages.linkDescriptors[0],
     messages.linkDescriptors[1],
     messages.linkDescriptors[2],
-    messages.linkDescriptors[3]
+    messages.linkDescriptors[3],
+    messages.linkDescriptors[4],
+    messages.linkDescriptors[5],
   ]);
   const footerControls = useAnimation();
 
   useEffect(() => {
     const setMessage = () => {
-      _setMessage(pickRandom(messages.linkDescriptors, 4));
+      _setMessage(pickRandom(messages.linkDescriptors, 6));
     };
 
     const animateOpen = async () => {

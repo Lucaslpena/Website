@@ -34,7 +34,8 @@ export default function Home() {
           <div>
             <h3>Present:</h3>
             <ul>
-              <li>exploring the landscape of tech, design, and social systems through <InlineLink link={'https://www.traverse-in.space/'} text={'Traverse In Space'}/></li>
+              <li>researching and developing prototypes with <InlineLink link={'https://www.amazon.jobs/en/teams/brand-innovation-lab'} text={'Amazon, Brand Innovation Lab'}/> in EU for multinational corporations in Technology and Fashion sectors</li>
+              <li><InlineLink link={'https://lucaslorenzop.notion.site/Writing-Index-5ddfe015112e4ba286dedfe5d9fb24d0'} text={'exploring the landscape of tech, design, and social systems'}/> and highlighting some here <InlineLink link={'https://www.traverse-in.space/'} text={'Traverse In Space'}/></li>
               <li>lecturing &quot;Designing with Extended Intelligence&quot; for <InlineLink link={'https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef/'} text={'MDEF in IAAC/FabLab'}/></li>
               <li>lecturing &quot;Smart Objects&quot; for Design Management Students in IED / University of Westminster</li>
             </ul>
@@ -61,7 +62,7 @@ export default function Home() {
           </div>
         </motion.section>
         <motion.section variants={fadeInUp} id={'logos'}>
-          <h3>Significant Clients:</h3>
+          <h3>Significant Clients/Collaborations:</h3>
           <div className={'logo-wrapper'}>
             <div>
               <div className={'logo'} property={'alpha'}>
