@@ -30,12 +30,12 @@
       @include media("<=575px") {
         grid-template-columns: .5fr .5fr;
         grid-template-rows: 1fr 1fr 1fr;
-        background: green;
+        //background: green;
       }
       @include media("<=400px") {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        background: green;
+        //background: green;
       }
 
       grid-gap: 2rem;
