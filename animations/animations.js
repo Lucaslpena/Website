@@ -3,7 +3,7 @@ export const cubicBezier = [0.645, 0.045, 0.355, 1];
 export const staggerBanner ={
   animate: {
     transition: {
-      staggerChildren: 0.25
+      staggerChildren: 0.0625
     }
   }
 };
