@@ -51,7 +51,7 @@
     > div{
       display: flex;
       flex-wrap: wrap;
-      gap: 1ch;
+      //gap: 1ch;
 
     }
     > div > div {
@@ -104,15 +104,16 @@
     >div {
       max-width: 75ex;
 
-      > div {
+      #offeringTime {
         margin: $container-padding;
         &:not(:first-of-type){
           margin: $container-padding * 1.5 $container-padding $container-padding !important;
         }
 
-        > div {
-          display: flex;
-          flex-direction: row;
+
+        > div:first-of-type {
+          display: grid;
+          grid-template-columns: 75px 1fr;
           gap: 1rem;
           align-items: flex-start;
           p{
@@ -129,6 +130,16 @@
       text-transform: uppercase;
       text-decoration: none;
       color: $font-color--dark;
+    }
+    ul{
+      margin-left: calc(75px + 1rem);
+      padding-left: 0;
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      gap: 1rem;
+      li{
+        padding: 0;
+      };
     }
   }
 

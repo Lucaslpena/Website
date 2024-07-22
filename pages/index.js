@@ -24,13 +24,13 @@ export default function Home() {
             <div>
               {
                 "Researching, developing, deploying tools, tech, creativity, and systems to future-proof businesses of scale.".split(' ').map((word, index) =>
-                    <div key={index}><motion.h2 variants={slideUp}>{word}</motion.h2></div>)
+                    <div key={index}><motion.h2 variants={slideUp}>{word}&nbsp;</motion.h2></div>)
               }
             </div>
             <div>
               {
                 "For 11+ years, I have led teams and served corporations in solving complex current and future problems.".split(' ').map((word, index) =>
-                    <div key={index}><motion.h3 variants={slideUp}>{word}</motion.h3></div>)
+                    <div key={index}><motion.h3 variants={slideUp}>{word}&nbsp;</motion.h3></div>)
               }
             </div>
           </motion.section>
@@ -56,7 +56,7 @@ export default function Home() {
 
           <motion.section variants={fadeInUp} id={'offerings'}>
             <div>
-              <h4>Services according to timeline:</h4>
+              <h4>Services by timeline:</h4>
               {
                 [
                   {title: 'Now', desc: "Designing and deploying tactical marketing and product interventions.", services: [
@@ -80,7 +80,7 @@ export default function Home() {
                     ]
                   }
                 ].map( (section, index) =>
-                    <div key={index}>
+                    <div key={index} id={'offeringTime'}>
                       <div>
                         <em>{section.title}</em><p>{section.desc}</p>
                       </div>
