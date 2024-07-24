@@ -2,6 +2,7 @@ import {cubicBezier, fadeInUp, staggerContent} from "../animations/animations";
 import {motion, useAnimation} from "framer-motion";
 import {useEffect, useState} from "react";
 import Link from "next/link";
+import {LightningBoltIcon, MagicWandIcon, RocketIcon} from "@radix-ui/react-icons";
 
 
 const pickRandom = (arr,count) => {
@@ -61,21 +62,22 @@ const Cta = () => {
         <motion.section variants={fadeInUp} id={'cta'}>
             <div>
                 <div>
-                    <h3>Curious to have me as your&nbsp;</h3>
+                    <div><h3>Curious to have me as your&nbsp;</h3></div>
+                    <div><motion.h3 animate={animationControls}>{desc}&nbsp;</motion.h3></div>
+                    <div><h3>in residence?&nbsp;</h3></div>
                 </div>
-                <div><motion.h3 animate={animationControls}>{desc}&nbsp;</motion.h3></div>
-                <div>
-                    <h3>in residence?&nbsp;</h3>
-                </div>
-
                 <br /><br />
-                <div>
-                <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'}>
+                    <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'}>
+                        <a target={'_blank'}>
+                            <h3><MagicWandIcon /> Contact for availability.</h3>
+                        </a>
+                    </Link>
+                <br />
+                <Link prefetch={false} href={'https://docsend.dropbox.com/view/wzy7iei3vb5538n2'}>
                     <a target={'_blank'}>
-                        <h3>Contact for availability.</h3>
+                        <h3><LightningBoltIcon /> Explore my capabilities and offerings in more detail.</h3>
                     </a>
                 </Link>
-                </div>
 
             </div>
         </motion.section>

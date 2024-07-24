@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import {Footer, Nav, InlineLink } from '../components';
+import {Footer, Nav, InlineLink, CaseStudies} from '../components';
 import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations/animations';
 import Link from 'next/link';
-import { FileTextIcon } from '@radix-ui/react-icons'
+import {FileTextIcon, RocketIcon, TimerIcon, TrackNextIcon} from '@radix-ui/react-icons'
 import Logos from "../components/Logos";
 import Cta from "../components/Cta";
 
@@ -59,20 +59,20 @@ export default function Home() {
               <h4>Services by timeline:</h4>
               {
                 [
-                  {title: 'Now', desc: "Designing and deploying tactical marketing and product interventions.", services: [
-                      "Marketing, Product, and CX Strategy",
-                      "UX/UI Design",
+                  {title: <><TimerIcon/> Now</>, desc: "Designing and deploying tactical marketing and product interventions.", services: [
+                      "Marketing and Product Strategy",
+                      "CX/UX/UI Design & Strategy",
                       "Website Development",
                       "Creative Direction",
                     ]},
-                  {title: 'Next', desc: "Integrating research in human-computer interactions and creativity into applied value-creation.", services: [
+                  {title: <><TrackNextIcon/> Next</>, desc: "Integrating research in human-computer interactions and creativity into applied value-creation.", services: [
                       "Ideation Workshopping",
                       "Product and User Research",
                       "Experiment Design",
                       "Innovation Strategy",
                     ]},
                   {
-                    title: 'Later', desc: "Exploring and prototyping emerging technology solutions.", services: [
+                    title: <><RocketIcon /> Later</>, desc: "Exploring and prototyping emerging technology solutions.", services: [
                       "Rapid Prototyping",
                       "Technology Studies",
                       "Design Futuring",
@@ -87,7 +87,9 @@ export default function Home() {
                       <div>
                         <ul>
                           {
-                            section.services.map((service, index) => <li key={index}>{service}</li>)
+                            section.services.map((service, index) =>
+                                <li key={index}>{service}</li>
+                            )
                           }
                         </ul>
                       </div>
@@ -98,6 +100,7 @@ export default function Home() {
           </motion.section>
 
           <Cta />
+          <CaseStudies />
 
 
           {/*<motion.section variants={fadeInUp} id={'gigs'}>*/}
