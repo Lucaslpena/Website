@@ -27,7 +27,6 @@ const data = [
 ]
 
 function Footer(props){
-
   const [open, setOpen] = useState(false);
   const [msg, _setMessage] = useState([
     messages.linkDescriptors[0],
@@ -55,6 +54,7 @@ function Footer(props){
       })).then(() => {
         setOpen(!open);
         if(open === false) {
+          // console.log({msg})
           setMessage();
         }
       });

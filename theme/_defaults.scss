@@ -61,6 +61,8 @@ h1 {
 h2 {
   font-size: $mod_1*$mod_1*$mod_1 *1rem !important;
   @extend %header;
+  line-height: 135%;
+  margin: 0 !important;
 
   @include media("<=tablet") {
     font-size: $mod_1*$mod_1 *1rem !important;
@@ -72,6 +74,7 @@ h3 {
   letter-spacing: .05rem;
   line-height: 125%;
   margin: 0;
+  font-weight: normal;
 
   @include media("<=tablet") {
     font-size: $mod_1 *1rem !important;
