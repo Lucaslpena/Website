@@ -73,7 +73,7 @@ const Cta = () => {
                         </a>
                     </Link>
                 <br />
-                <Link prefetch={false} href={'https://docsend.dropbox.com/view/wzy7iei3vb5538n2'}>
+                <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'}>
                     <a target={'_blank'}>
                         <h3><LightningBoltIcon /> Explore my capabilities and offerings in more detail.</h3>
                     </a>
