@@ -29,7 +29,7 @@ export default function Home() {
             </div>
             <div>
               {
-                "For 11+ years, I have led teams and served corporations in solving complex current and future problems.".split(' ').map((word, index) =>
+                "With 11 years spanning 40 digital experience launches, I have led teams and served corporations in solving complex current and future problems.".split(' ').map((word, index) =>
                     <div key={index}><motion.h3 variants={slideUp}>{word}&nbsp;</motion.h3></div>)
               }
             </div>
