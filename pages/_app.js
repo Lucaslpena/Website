@@ -17,11 +17,7 @@ class MyApp extends App {
     return(
         <>
           <Head>
-            <title>Lucas Lorenzo Pena</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link rel="icon" href="/favicon.ico"/>
-            <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Roboto&display=swap" rel="stylesheet" />
+              <title>Lucas Lorenzo Pena</title>
           </Head>
           <AnimatePresence exitBeforeEnter={true} >
             <Analytics />
