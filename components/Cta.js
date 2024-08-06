@@ -67,16 +67,12 @@ const Cta = () => {
                     <div><h3>in residence?&nbsp;</h3></div>
                 </div>
                 <br /><br />
-                    <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'}>
-                        <a target={'_blank'}>
-                            <h3><MagicWandIcon /> Contact for availability.</h3>
-                        </a>
-                    </Link>
+                <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'} target={'_blank'}>
+                    <h3><MagicWandIcon /> Contact for availability.</h3>
+                </Link>
                 <br />
-                <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'}>
-                    <a target={'_blank'}>
-                        <h3><LightningBoltIcon /> Explore my capabilities and offerings in more detail.</h3>
-                    </a>
+                <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'} target={'_blank'}>
+                    <h3><LightningBoltIcon /> Explore my capabilities and offerings in more detail.</h3>
                 </Link>
 
             </div>

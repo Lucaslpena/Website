@@ -1,5 +1,6 @@
 import React from 'react';
 import App from 'next/app';
+import Head from 'next/head';
 
 import '../theme/theme.scss';
 import { AnimatePresence } from 'framer-motion';
@@ -14,10 +15,19 @@ class MyApp extends App {
   render(){
     const { Component, pageProps, router } = this.props;
     return(
-      <AnimatePresence exitBeforeEnter={true} >
-        <Analytics />
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+        <>
+          <Head>
+            <title>Lucas Lorenzo Pena</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+            <link rel="icon" href="/favicon.ico"/>
+            <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Roboto&display=swap" rel="stylesheet" />
+          </Head>
+          <AnimatePresence exitBeforeEnter={true} >
+            <Analytics />
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </>
     );
   }
 }

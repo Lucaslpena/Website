@@ -73,8 +73,7 @@ function Footer(props){
 
           { data.map( (obj, i) =>
             <div className={style.container} key={i}>
-              <Link prefetch={false} href={obj.link}>
-                <a target='_blank'>
+              <Link prefetch={false} href={obj.link} target='_blank'>
                   <div className={style.description}>
                     <motion.em
                       // variants={slideUp}
@@ -89,7 +88,6 @@ function Footer(props){
                   <div className={style.label}>
                     <em>{obj.description}</em>
                   </div>
-                </a>
               </Link>
             </div>
           )}

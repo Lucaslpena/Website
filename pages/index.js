@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import {Footer, Nav, InlineLink, CaseStudies, P5Wrapper} from '../components';
 import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations/animations';
@@ -11,11 +10,6 @@ export default function Home() {
 
   return(
       <>
-        <Head>
-          <title>Lucas Lorenzo Pena</title>
-          <link rel="icon" href="/favicon.ico"/>
-          <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Roboto&display=swap" rel="stylesheet" />
-        </Head>
         {/*<Nav />*/}
 
         <div className={'pseudo-background'}>
