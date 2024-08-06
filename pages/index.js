@@ -19,7 +19,6 @@ export default function Home() {
         {/*<Nav />*/}
 
         <div className={'pseudo-background'}>
-          <P5Wrapper />
         </ div>
         <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
           <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
