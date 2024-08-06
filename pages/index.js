@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {Footer, Nav, InlineLink, CaseStudies} from '../components';
+import {Footer, Nav, InlineLink, CaseStudies, P5Wrapper} from '../components';
 import { motion } from 'framer-motion';
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from '../animations/animations';
 import Link from 'next/link';
@@ -16,20 +16,29 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico"/>
           <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@500&family=Roboto&display=swap" rel="stylesheet" />
         </Head>
-        <Nav />
+        {/*<Nav />*/}
+
         <div className={'pseudo-background'}>
+          <P5Wrapper />
         </ div>
         <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
           <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
             <div>
               {
-                "Researching, developing, deploying tools, tech, creativity, and systems to future-proof businesses of scale.".split(' ').map((word, index) =>
-                    <div key={index}><motion.h2 variants={slideUp}>{word}&nbsp;</motion.h2></div>)
+                "Future-proofing a businesses needs research, development, and education of tools, tech, creativity, and systems.".split(' ').map((word, index) =>
+                    <div key={index}><motion.h1 variants={slideUp}>{word}&nbsp;</motion.h1></div>)
               }
             </div>
             <div>
+              <div>
+                <motion.p variants={slideUp}>
+                  ...A challenge is too significant to outsource
+                </motion.p>
+              </div>
+            </div>
+            <div>
               {
-                "With 11 years spanning 40 digital experience launches, I have led teams and served corporations in solving complex current and future problems.".split(' ').map((word, index) =>
+                "With 11 years of engineering products, workshopping owners, teaching designers, directing creatives, coaching teams, and over 40 digital experience launches under my belt, you get a full-service, innovation player-coach with proven results.".split(' ').map((word, index) =>
                     <div key={index}><motion.h3 variants={slideUp}>{word}&nbsp;</motion.h3></div>)
               }
             </div>
