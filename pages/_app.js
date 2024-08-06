@@ -3,6 +3,7 @@ import App from 'next/app';
 
 import '../theme/theme.scss';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/react"
 
 class MyApp extends App {
   componentDidMount(){
@@ -14,6 +15,7 @@ class MyApp extends App {
     const { Component, pageProps, router } = this.props;
     return(
       <AnimatePresence exitBeforeEnter={true} >
+        <Analytics />
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>
     );
