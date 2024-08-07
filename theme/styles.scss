@@ -57,7 +57,7 @@
 
   #banner {
     position: relative;
-    padding: 2rem 0rem;
+    padding: 5rem 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,24 +107,19 @@
       margin: 0 !important;
     }
 
-
-    //h2 > div {
-    //  overflow: hidden;
-    //  //position: relative;
-    //  h2 {
-    //    line-height: 135%;
-    //    margin: 0;
-    //  }
-    //  span {
-    //
-    //  }
-    //}
-
-    //h1{
-    //  mix-blend-mode: difference;
-    //  color: white;
-    //}
-
+    button {
+      all: unset;
+      display: inline-flex;
+      align-content: center;
+      align-items: baseline;
+      gap: .5rem;
+      border-radius: 1rem;
+      mix-blend-mode: difference;
+      background: white;
+      color: black;
+      padding: .5rem .75rem .55rem .75rem;
+      cursor: pointer;
+    }
   }
 
   section > div {

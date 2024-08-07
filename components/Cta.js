@@ -1,13 +1,13 @@
-import {cubicBezier, fadeInUp, staggerContent} from "../animations/animations";
+import {cubicBezier, fadeInUp} from "../animations/animations";
 import {motion, useAnimation} from "framer-motion";
 import {useEffect, useState} from "react";
 import Link from "next/link";
-import {LightningBoltIcon, MagicWandIcon, RocketIcon} from "@radix-ui/react-icons";
+import {LightningBoltIcon, MagicWandIcon} from "@radix-ui/react-icons";
 
 
-const pickRandom = (arr,count) => {
+const pickRandom = (arr, count) => {
     let _arr = [...arr];
-    return[...Array(count)].map( ()=> _arr.splice(Math.floor(Math.random() * _arr.length), 1)[0] );
+    return [...Array(count)].map(() => _arr.splice(Math.floor(Math.random() * _arr.length), 1)[0]);
 }
 
 const descriptor = [
@@ -29,50 +29,52 @@ const Cta = () => {
     const [desc, _setDesc] = useState(descriptor[0]);
     const animationControls = useAnimation();
 
-    useEffect( () => {
+    useEffect(() => {
             const setDesc = () => {
                 _setDesc(pickRandom(descriptor, 1)[0]);
             };
 
             const animateOpen = async () => {
-                animationControls.start( {
+                animationControls.start({
                     y: (open ? 0 : 100),
                     transition: {
-                        delay: ( open ? (0.25) : (3.25)),
+                        delay: (open ? (0.25) : (3.25)),
                         duration: 0.25,
                         ease: cubicBezier
                     }
                 }).then(() => {
                     setOpen(!open);
-                    if(open === false) {
+                    if (open === false) {
                         console.log({desc})
                         setDesc();
                     }
                 });
             };
             animateOpen()
-        }, [open, animationControls, setOpen, _setDesc]
+        }, [open, animationControls, setOpen, _setDesc, desc]
     )
 
     useEffect(() => {
         // console.log({desc})
     }, [desc])
 
-    return(
+    return (
         <motion.section variants={fadeInUp} id={'cta'}>
             <div>
                 <div>
                     <div><h3>Curious to have me as your&nbsp;</h3></div>
-                    <div><motion.h3 animate={animationControls}>{desc}&nbsp;</motion.h3></div>
+                    <div>
+                        <motion.h3 animate={animationControls}>{desc}&nbsp;</motion.h3>
+                    </div>
                     <div><h3>in residence?&nbsp;</h3></div>
                 </div>
-                <br /><br />
+                <br/><br/>
                 <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'} target={'_blank'}>
-                    <h3><MagicWandIcon /> Contact for availability.</h3>
+                    <h3><MagicWandIcon/> Contact for availability.</h3>
                 </Link>
-                <br />
+                <br/>
                 <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'} target={'_blank'}>
-                    <h3><LightningBoltIcon /> Explore my capabilities and offerings in more detail.</h3>
+                    <h3><LightningBoltIcon/> Explore my capabilities and offerings in more detail.</h3>
                 </Link>
 
             </div>

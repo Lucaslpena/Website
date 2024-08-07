@@ -1,9 +1,17 @@
+import React, {useRef} from 'react';
 import {Background, CaseStudies, Cta, Footer, Logos} from '../components';
 import {motion} from "framer-motion";
 import {fadeInUp, slideUp, staggerBanner, staggerContent} from "../animations/animations";
-import {RocketIcon, TimerIcon, TrackNextIcon} from "@radix-ui/react-icons";
+import {ArrowRightIcon, RocketIcon, TimerIcon, TrackNextIcon} from "@radix-ui/react-icons";
 
 export default function Home() {
+    const InfoRef = useRef(null);
+    const scrollToInfo = () => {
+        if (InfoRef.current) {
+            InfoRef.current.scrollIntoView({behavior: 'smooth'});
+        }
+    };
+
     return (
         <>
             {/*<Nav />*/}
@@ -16,26 +24,37 @@ export default function Home() {
                     <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
                         <div>
                             {
-                                "Future-proofing a businesses needs research, development, and education of tools, tech, creativity, and systems.".split(' ').map((word, index) =>
+                                "Future-proofing a business is a task too important to outsource, and too wicked to solve without expertise.".split(' ').map((word, index) =>
                                     <div key={index}>
                                         <motion.h1 variants={slideUp}>{word}&nbsp;</motion.h1>
                                     </div>)
                             }
                         </div>
                         <div>
-                            <div>
-                                <motion.p variants={slideUp}>
-                                    ...A challenge is too significant to outsource
-                                </motion.p>
-                            </div>
-                        </div>
-                        <div>
                             {
-                                "With 11 years of engineering products, workshopping owners, teaching designers, directing creatives, coaching teams, and over 40 digital experience launches under my belt, you get a full-service, innovation player-coach with proven results.".split(' ').map((word, index) =>
+                                "I'm an innovation strategist player-coach with 11 years of proven experience in solving current and future problems through research, development, education, tools, tech, creativity, and systems.".split(' ').map((word, index) =>
                                     <div key={index}>
-                                        <motion.h3 variants={slideUp}>{word}&nbsp;</motion.h3>
+                                        <motion.h4 variants={slideUp}>{word}&nbsp;</motion.h4>
                                     </div>)
                             }
+                        </div>
+                        <div>
+                            <motion.div
+                                whileHover={{scale: 1.05}}
+                                transition={{duration: 0.125}}
+                            >
+                                <motion.button
+                                    variants={slideUp}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToInfo()
+                                    }}
+                                >
+                                    <p>Learn more</p>
+                                    <motion.span>
+                                        <ArrowRightIcon/></motion.span>
+                                </motion.button>
+                            </motion.div>
                         </div>
 
                     </motion.section>
@@ -46,21 +65,28 @@ export default function Home() {
                     <Logos/>
                 </motion.section>
 
-                <motion.section variants={fadeInUp} id={'intro'}>
+                <motion.section variants={fadeInUp} id={'intro'} ref={InfoRef}>
                     <div>
                         <h3>
                             Wicked problems are complex, multifaceted, jumbled, nuanced, systemic challenges to
-                            value-creation.
+                            value-creation. They exist in at scales; both large and small.
                         </h3>&nbsp;&nbsp;
                         <h3>
-                            Creativity is innovative value-creation. It&apos;s putting philosophy to work through
-                            purpose-built systems, changing the paradigms of behavior and thinking.
+                            Innovation is a way of being and creating. It&apos;s about philosophy working through
+                            purpose-built systems to changing the way we think and behave.
                         </h3>&nbsp;&nbsp;
                         <h3>
-                            My approach to creativity is cultivated through a deliberate traversal of
-                            disciplines—engineering, design, cognitive science, philosophy of creativity, research, and
-                            beyond—to detangle, make sense of, and solve wicked problems from both ends; individual and
+                            My approach to innovation is cultivated through the deliberate integration
+                            disciplines—engineering, design, cognitive science, philosophy, and experimentation—to
+                            detangle, make sense of, and solve problems from both ends; individual and
                             systemic.
+                        </h3>&nbsp;&nbsp;
+                        <h3>
+                            Your tools, tech, and systems should be designed to solve problems at scale, for tomorrow
+                            not just today.
+                        </h3>&nbsp;&nbsp;
+                        <h3>
+                            Let&apos;s get creating your future.
                         </h3>
                     </div>
                 </motion.section>
