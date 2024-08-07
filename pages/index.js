@@ -1,10 +1,11 @@
 import React, {useRef} from 'react';
-import {Background, CaseStudies, Cta, Footer, Logos} from '../components';
+import {Banner, CaseStudies, Cta, Footer, Logos} from '../components';
 import {motion} from "framer-motion";
-import {fadeInUp, slideUp, staggerBanner, staggerContent} from "../animations/animations";
-import {ArrowRightIcon, RocketIcon, TimerIcon, TrackNextIcon} from "@radix-ui/react-icons";
+import {fadeInUp, staggerContent} from "../animations/animations";
+import {RocketIcon, TimerIcon, TrackNextIcon} from "@radix-ui/react-icons";
 
 export default function Home() {
+
     const InfoRef = useRef(null);
     const scrollToInfo = () => {
         if (InfoRef.current) {
@@ -17,48 +18,7 @@ export default function Home() {
             {/*<Nav />*/}
 
             <motion.div className={'container'} initial='initial' animate='animate' variants={staggerContent}>
-                <div id={'bannerWrapper'}>
-                    <Background/>
-                    <div style={{zIndex: 2}} id={'gradient'}>
-                    </div>
-                    <motion.section id={'banner'} initial='initial' animate='animate' variants={staggerBanner}>
-                        <div>
-                            {
-                                "Future-proofing a business is a task too important to outsource, and too wicked to solve without expertise.".split(' ').map((word, index) =>
-                                    <div key={index}>
-                                        <motion.h1 variants={slideUp}>{word}&nbsp;</motion.h1>
-                                    </div>)
-                            }
-                        </div>
-                        <div>
-                            {
-                                "I'm an innovation strategist player-coach with 11 years of proven experience in solving current and future problems through research, development, education, tools, tech, creativity, and systems.".split(' ').map((word, index) =>
-                                    <div key={index}>
-                                        <motion.h4 variants={slideUp}>{word}&nbsp;</motion.h4>
-                                    </div>)
-                            }
-                        </div>
-                        <div>
-                            <motion.div
-                                whileHover={{scale: 1.05}}
-                                transition={{duration: 0.125}}
-                            >
-                                <motion.button
-                                    variants={slideUp}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToInfo()
-                                    }}
-                                >
-                                    <p>Learn more</p>
-                                    <motion.span>
-                                        <ArrowRightIcon/></motion.span>
-                                </motion.button>
-                            </motion.div>
-                        </div>
-
-                    </motion.section>
-                </div>
+                <Banner scrollCallBack={scrollToInfo}/>
 
                 <motion.section variants={fadeInUp} id={'logos'}>
                     {/*<h4>Significant Clients/Collaborations:</h4>*/}

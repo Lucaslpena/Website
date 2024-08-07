@@ -37,20 +37,6 @@
     justify-content: center;
   }
 
-  #bannerWrapper {
-    position: relative;
-    display: grid;
-    grid: 1fr / 1fr;
-
-    > * {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    overflow: hidden;
-    margin: 1rem;
-  }
-
   #gradient {
     background: rgba(0, 0, 0, 0) url('/noise.svg');
   }
