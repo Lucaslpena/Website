@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import {Banner, CaseStudies, Cta, Footer, Logos} from '../components';
 import {motion} from "framer-motion";
 import {fadeInUp, staggerContent} from "../animations/animations";
-import {RocketIcon, TimerIcon, TrackNextIcon} from "@radix-ui/react-icons";
+import {ArrowRightIcon, RocketIcon, TimerIcon, TrackNextIcon} from "@radix-ui/react-icons";
 
 export default function Home() {
 
@@ -21,15 +21,15 @@ export default function Home() {
                 <Banner scrollCallBack={scrollToInfo}/>
 
                 <motion.section variants={fadeInUp} id={'logos'}>
-                    {/*<h4>Significant Clients/Collaborations:</h4>*/}
                     <Logos/>
                 </motion.section>
 
                 <motion.section variants={fadeInUp} id={'intro'} ref={InfoRef}>
                     <div>
-                        <h3>
-                            Wicked problems are complex, multifaceted, jumbled, nuanced, systemic challenges to
-                            value-creation. They exist in at scales; both large and small.
+                        <h3><span>
+                            <ArrowRightIcon/> Wicked problems are complex, multifaceted, jumbled, nuanced,
+                            systemic
+                            challenges to value-creation. They exist in at scales; both large and small.</span>
                         </h3>&nbsp;&nbsp;
                         <h3>
                             Innovation is a way of being and creating. It&apos;s about philosophy working through
@@ -45,8 +45,7 @@ export default function Home() {
                             Your tools, tech, and systems should be designed to solve problems at scale, for tomorrow
                             not just today.
                         </h3>&nbsp;&nbsp;
-                        <h3>
-                            Let&apos;s get creating your future.
+                        <h3><span>Let&apos;s get creating your future. <RocketIcon/></span>
                         </h3>
                     </div>
                 </motion.section>

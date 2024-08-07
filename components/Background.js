@@ -22,6 +22,7 @@ const GradientShaderMaterial = ({children}) => {
         "#f48c25",
         "#19a4bd",
         "#c84a56",
+        //try this https://cc-prod.scene7.com/is/image/CCProdAuthor/chromaric-aberration_P5b_690x450?$pjpeg$&jpegSize=200&wid=690
     ].map(x => new Color(x))
 
     console.log({colors})

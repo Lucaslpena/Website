@@ -3,6 +3,7 @@ import {motion, useAnimation} from "framer-motion";
 import {useEffect, useState} from "react";
 import Link from "next/link";
 import {LightningBoltIcon, MagicWandIcon} from "@radix-ui/react-icons";
+import style from './Cta.module.scss';
 
 
 const pickRandom = (arr, count) => {
@@ -20,8 +21,9 @@ const descriptor = [
     "design strategist",
     "experience designer",
     "creative consultant",
-    "product experience designer",
     "creative director",
+    "futurist",
+    "systems designer",
 ];
 
 const Cta = () => {
@@ -38,7 +40,7 @@ const Cta = () => {
                 animationControls.start({
                     y: (open ? 0 : 100),
                     transition: {
-                        delay: (open ? (0.25) : (3.25)),
+                        delay: (open ? (0.25) : (3)),
                         duration: 0.25,
                         ease: cubicBezier
                     }
@@ -59,24 +61,36 @@ const Cta = () => {
     }, [desc])
 
     return (
-        <motion.section variants={fadeInUp} id={'cta'}>
+        <motion.section variants={fadeInUp} className={style.Cta} id={'cta'}>
             <div>
                 <div>
-                    <div><h3>Curious to have me as your&nbsp;</h3></div>
+                    <h4>Hire me as your</h4>
                     <div>
-                        <motion.h3 animate={animationControls}>{desc}&nbsp;</motion.h3>
+                        <motion.h1 animate={animationControls}>{desc}&nbsp;</motion.h1>
                     </div>
-                    <div><h3>in residence?&nbsp;</h3></div>
+                    <h4>in residence.</h4>
                 </div>
                 <br/><br/>
-                <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'} target={'_blank'}>
-                    <h3><MagicWandIcon/> Contact for availability.</h3>
-                </Link>
-                <br/>
-                <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'} target={'_blank'}>
-                    <h3><LightningBoltIcon/> Explore my capabilities and offerings in more detail.</h3>
-                </Link>
-
+                <div>
+                    <motion.div
+                        whileHover={{scale: 1.05}}
+                        transition={{duration: 0.125}}
+                    >
+                        <Link prefetch={false} href={'mailto:inquiry@lucaslorenzo.digital'} target={'_blank'}>
+                            <p>Contact for availability <MagicWandIcon/></p>
+                        </Link>
+                    </motion.div>
+                    <br/>
+                    <motion.div
+                        whileHover={{scale: 1.05}}
+                        transition={{duration: 0.125}}
+                    >
+                        <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'}
+                              target={'_blank'}>
+                            <p>Explore capabilities and offerings details <LightningBoltIcon/></p>
+                        </Link>
+                    </motion.div>
+                </div>
             </div>
         </motion.section>
     )

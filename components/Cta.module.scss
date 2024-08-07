@@ -1,0 +1,83 @@
+@import '../theme/constants';
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 11% 0%
+  }
+  50% {
+    background-position: 90% 100%
+  }
+  100% {
+    background-position: 11% 0%
+  }
+}
+
+.Cta {
+  > div {
+    max-width: unset !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding: calc(#{$container-padding} * 2) 0 !important;
+
+    background: transparent;
+    background-image: linear-gradient(to bottom right, #2a2a2a 0%, #212121 100%);
+    background-size: 500% 500%;
+    animation: backgroundAnimation $background-transition--time $animation-curve infinite;
+
+
+    > div:first-of-type {
+      display: grid;
+      grid-template-rows: min-content auto min-content;
+      gap: calc(#{$container-padding} / 2);
+
+      > div {
+        text-align: center;
+        overflow: hidden;
+        min-height: 35%;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: .5rem;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+  }
+
+  h3, h4, h1 {
+    text-align: center;
+    color: white;
+  }
+
+  h1 {
+    line-height: 145%;
+    text-transform: capitalize;
+  }
+
+  a {
+    all: unset;
+    display: inline-flex;
+    align-content: center;
+    align-items: baseline;
+    gap: .5rem;
+    border-radius: 1rem;
+    mix-blend-mode: difference;
+    background: white;
+    color: black !important;
+    padding: .5rem .75rem .55rem .75rem;
+    cursor: pointer;
+
+    p {
+      font-size: .8 *1rem !important;
+      //color: $font-color--dark;
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+      font-weight: bold;
+      margin: 0 !important;
+    }
+  }
+}

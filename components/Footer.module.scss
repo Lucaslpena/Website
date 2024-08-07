@@ -1,15 +1,31 @@
 @import '../theme/constants';
 @import '../theme/mixins';
 
-.Footer{
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 11% 0%
+  }
+  50% {
+    background-position: 90% 100%
+  }
+  100% {
+    background-position: 11% 0%
+  }
+}
+
+.Footer {
   margin-top: $container-padding;
-  background-color: black;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   color: $font-color--light;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
+
+  background: transparent;
+  background-image: linear-gradient(to bottom right, #2a2a2a 0%, #212121 100%);
+  background-size: 500% 500%;
+  animation: backgroundAnimation $background-transition--time $animation-curve infinite;
 
   .contact {
     min-height: initial;
@@ -17,7 +33,7 @@
     margin: 0 auto;
     width: 100%;
 
-    >div:first-of-type {
+    > div:first-of-type {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       grid-template-rows: 1fr;
@@ -40,32 +56,36 @@
 
       grid-gap: 2rem;
       width: 100%;
+
       & > div > a {
         display: grid;
         grid-template-rows: 1fr 1fr;
       }
     }
 
-    %fullWidth{
+    %fullWidth {
       padding: .5rem 0;
       width: 100%;
     }
 
-      .container{
-          @extend em;
+    .container {
+      @extend em;
+    }
+
+    .description {
+      position: relative;
+      overflow: hidden;
+      @extend %fullWidth;
+
+      em {
+        position: absolute;
+        top: .75rem;
       }
-      .description{
-        position: relative;
-        overflow: hidden;
-        @extend %fullWidth;
-        em{
-          position: absolute;
-          top: .75rem;
-        }
-      }
-      .label{
-        border-top: 2px solid $border-color--light;
-        @extend %fullWidth;
-      }
+    }
+
+    .label {
+      border-top: 2px solid $border-color--light;
+      @extend %fullWidth;
+    }
   }
 }
