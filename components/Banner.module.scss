@@ -13,3 +13,31 @@
     grid-row: 1;
   }
 }
+
+.Gradient {
+  background: rgba(0, 0, 0, 0) url('/noise.svg');
+  mix-blend-mode: difference;
+  z-index: 2;
+  width: calc(100% - 4rem);
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    padding: 1rem;
+  }
+
+  svg {
+    width: 75px;
+  }
+
+  em {
+    font-size: .8 *1rem !important;
+    //color: $font-color--dark;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-weight: bold;
+    margin: 0 !important;
+  }
+}

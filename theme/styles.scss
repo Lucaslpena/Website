@@ -37,10 +37,6 @@
     justify-content: center;
   }
 
-  #gradient {
-    background: rgba(0, 0, 0, 0) url('/noise.svg');
-  }
-
   #banner {
     position: relative;
     padding: 5rem 0rem;
@@ -134,7 +130,7 @@
       gap: .25rem;
     }
   }
-  
+
   #offerings {
     > div {
       max-width: 75ex;
