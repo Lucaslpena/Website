@@ -36,7 +36,7 @@ export default function Home() {
                             purpose-built systems to changing the way we think and behave.
                         </h3>&nbsp;&nbsp;
                         <h3>
-                            My approach to innovation is cultivated through the deliberate integration
+                            My approach to innovation is cultivated through the deliberate integration of
                             disciplines—engineering, design, cognitive science, philosophy, and experimentation—to
                             detangle, make sense of, and solve problems from both ends; individual and
                             systemic.
