@@ -85,7 +85,7 @@ const Cta = () => {
                         whileHover={{scale: 1.05}}
                         transition={{duration: 0.125}}
                     >
-                        <Link prefetch={false} href={'https://docsend.dropbox.com/view/634e968japzmr8c9'}
+                        <Link prefetch={false} href={'https://docsend.dropbox.com/view/q89bz7u5e2qruekb'}
                               target={'_blank'}>
                             <p>Explore capabilities and offerings details <LightningBoltIcon/></p>
                         </Link>
