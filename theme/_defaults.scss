@@ -15,12 +15,14 @@ $mod_1: math.div(4, 3);
   $u3: unit($min-font-size);
   $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  @if $u1 ==$u2 and $u1 ==$u3 and $u1 ==$u4 {
     & {
       font-size: $min-font-size;
+
       @media screen and (min-width: $min-vw) {
         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
+
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }
@@ -72,7 +74,7 @@ h2 {
 }
 
 h3 {
-  font-size: $mod_1  *1rem !important;
+  font-size: $mod_1 *1rem !important;
   @extend %header;
   letter-spacing: .05rem;
   line-height: 126%;
@@ -85,7 +87,7 @@ h3 {
 }
 
 h4 {
-  font-size: $mod_1  *.8rem !important;
+  font-size: $mod_1 *.8rem !important;
   @extend %header;
   letter-spacing: .05rem;
   line-height: 126%;
@@ -97,8 +99,15 @@ h4 {
   }
 }
 
+p,
+li {
+  font-family: 'Palanquin', sans-serif !important;
+  font-size: $mod_1 *.7rem !important;
+  line-height: 125% !important;
+}
 
-a, a > * {
+a,
+a>* {
   color: $font-color--dark;
 }
 

@@ -1,13 +1,17 @@
 @use "sass:math";
 @import "_constants";
+$maxWidth: 100ex;
+
 
 @keyframes backgroundAnimation {
   0% {
     background-position: 11% 0%
   }
+
   50% {
     background-position: 90% 100%
   }
+
   100% {
     background-position: 11% 0%
   }
@@ -46,17 +50,17 @@
     color: #ebedee !important;
     z-index: 3;
 
-    > div {
+    >div {
       width: 100%;
       text-align: left;
-      max-width: 75ex;
+      max-width: $maxWidth;
     }
 
-    > div:nth-of-type(1) {
+    >div:nth-of-type(1) {
       padding-bottom: 0;
     }
 
-    > div:nth-of-type(3) {
+    >div:nth-of-type(3) {
       padding-top: 0;
     }
 
@@ -64,18 +68,18 @@
     //  padding-top: 0;
     //}
 
-    > div {
+    >div {
       display: flex;
       flex-wrap: wrap;
       //gap: 1ch;
 
     }
 
-    > div > div {
+    >div>div {
       overflow: hidden;
       width: fit-content;
 
-      > * {
+      >* {
         width: fit-content;
       }
     }
@@ -104,7 +108,7 @@
     }
   }
 
-  section > div {
+  section>div {
     max-width: $content-width--max;
     width: 100%;
     padding: $container-padding;
@@ -113,10 +117,10 @@
   }
 
   #intro {
-    > div {
-      max-width: 75ex;
+    >div {
+      max-width: $maxWidth;
 
-      > div:first-of-type > div {
+      >div:first-of-type>div {
         display: inline-block;
         overflow: hidden;
         min-height: 35%;
@@ -132,8 +136,8 @@
   }
 
   #offerings {
-    > div {
-      max-width: 75ex;
+    >div {
+      max-width: $maxWidth;
 
       #offeringTime {
         margin: $container-padding;
@@ -143,7 +147,7 @@
         }
 
 
-        > div:first-of-type {
+        >div:first-of-type {
           display: grid;
           grid-template-columns: 90px 1fr;
           gap: 1rem;
@@ -194,7 +198,8 @@
         text-align: center;
         border-radius: .5rem;
       }
-    ;
+
+      ;
     }
   }
 
@@ -213,7 +218,7 @@
       box-sizing: border-box;
       padding: 0;
 
-      & > div {
+      &>div {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -225,80 +230,84 @@
           padding-top: $container-padding*1.5;
         }
       }
-
-      .logo {
-        height: 70px;
-        width: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
-        box-sizing: border-box;
-
-
-        svg {
-          height: 60px;
-          width: auto;
-        }
-
-        .st0 {
-          fill: #BBBDBF;
-        }
-
-        .st1 {
-          fill: #034DA1;
-        }
-
-        .st2 {
-          fill: #FFF100;
-        }
-
-        .st4 {
-          fill: #626366;
-        }
-
-        &[property="nike"], &[property="Benz"], &[property="JRC"] {
-          svg {
-            height: 50px !important;
-            width: auto !important;
-          }
-        }
-
-        &[property="JRC"], &[property="FCH"], {
-          svg {
-            height: 60px !important;
-            width: auto !important;
-          }
-        }
-      }
     }
   }
 
-  #about {
-    min-height: initial;
+  .logo {
+    height: 70px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    box-sizing: border-box;
 
-    h3 {
-      padding-bottom: .5rem;
-      overflow: hidden;
 
-      span {
-        border-bottom: 2px solid $border-color--dark;
+    svg {
+      height: 60px;
+      width: auto;
+    }
+
+    .st0 {
+      fill: #BBBDBF;
+    }
+
+    .st1 {
+      fill: #034DA1;
+    }
+
+    .st2 {
+      fill: #FFF100;
+    }
+
+    .st4 {
+      fill: #626366;
+    }
+
+    &[property="nike"],
+    &[property="Benz"],
+    &[property="JRC"] {
+      svg {
+        height: 50px !important;
+        width: auto !important;
       }
     }
 
-    p {
-      margin: 1rem 0 .5rem;
-    }
-
-    ul {
-      margin: .25rem 0 1rem;
-    }
-
-    .academia {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    &[property="JRC"],
+    &[property="FCH"],
+    {
+    svg {
+      height: 60px !important;
+      width: auto !important;
     }
   }
+}
+
+#about {
+  min-height: initial;
+
+  h3 {
+    padding-bottom: .5rem;
+    overflow: hidden;
+
+    span {
+      border-bottom: 2px solid $border-color--dark;
+    }
+  }
+
+  p {
+    margin: 1rem 0 .5rem;
+  }
+
+  ul {
+    margin: .25rem 0 1rem;
+  }
+
+  .academia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
 }
 
 .contentLink {

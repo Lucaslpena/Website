@@ -5,16 +5,17 @@
   0% {
     background-position: 11% 0%
   }
+
   50% {
     background-position: 90% 100%
   }
+
   100% {
     background-position: 11% 0%
   }
 }
 
 .Footer {
-  margin-top: $container-padding;
   position: relative;
   z-index: 2;
   display: flex;
@@ -33,7 +34,7 @@
     margin: 0 auto;
     width: 100%;
 
-    > div:first-of-type {
+    >div:first-of-type {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       grid-template-rows: 1fr;
@@ -48,6 +49,7 @@
         grid-template-rows: 1fr 1fr 1fr;
         //background: green;
       }
+
       @include media("<=400px") {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -57,7 +59,7 @@
       grid-gap: 2rem;
       width: 100%;
 
-      & > div > a {
+      &>div>a {
         display: grid;
         grid-template-rows: 1fr 1fr;
       }
